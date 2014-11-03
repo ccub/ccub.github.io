@@ -20,6 +20,7 @@ $(function() {
             $.ajax({
                 url: "//forms.brace.io/ccub.soporte@gmail.com",
                 type: "POST",
+                dataType: "json",
                 data: {
                     name: name,
                     phone: phone,
