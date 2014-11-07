@@ -57,6 +57,11 @@ h6 {
     font-weight: 700;
 }
 
+.common-charts{
+    width:80%;
+    margin: auto;
+}
+
 .imagen-datafakka {
     margin:0 auto; 
     border:7px solid #fff;
