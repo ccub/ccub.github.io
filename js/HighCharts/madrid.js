@@ -14,6 +14,9 @@ $(function () {
                 text: 'Fruit eaten'
             }
         },
+        credits: {
+            enabled: false
+        },
         series: [{
             name: 'Jane',
             color: '#fed136',
