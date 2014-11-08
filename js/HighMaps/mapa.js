@@ -35,7 +35,7 @@ $(function () {
         value: 50
     }, {
         'hc-key': 'es-m',
-        value: 99
+        value: 60
     }];
 
 
