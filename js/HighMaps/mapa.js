@@ -1,41 +1,12 @@
 $(function () {
-    //http://blog.garciaechegaray.com/2014/07/02/probando-highcharts-4-highmaps.html
-    
     // Preparamos los datos a mostrar en el mapa
     // 'hc-key' es el 'id' de cada provincia en el fichero geojson
     var data = [{
-        'hc-key': 'es-pm',
-        value: 0
-    }, {
-        'hc-key': 'es-7253',
-        value: 1
-    }, {
-        'hc-key': 'es-ce',
-        value: 2
-    }, {
-        'hc-key': 'es-7254',
-        value: 3
-    }, {
-        'hc-key': 'es-cb',
-        value: 4
-    }, {
-        'hc-key': 'es-na',
-        value: 5
-    }, {
-        'hc-key': 'es-1306',
-        value: 6
-    }, {
-        'hc-key': 'es-393',
-        value: 15
-    }, {
-        'hc-key': 'es-ex',
-        value: 25
-    }, {
-        'hc-key': 'es-7267',
-        value: 50
-    }, {
         'hc-key': 'es-m',
-        value: 60
+        value: 70,
+        events: {
+            click: function() {$('#portfolioModal1').modal('show');}
+        }
     }];
 
 
@@ -43,29 +14,34 @@ $(function () {
     $('#container').highcharts('Map', {
 
         title: {
-            text: 'Visitas por provincia'
+            text: null
         },
 
         subtitle: {
-            text: 'Ejemplo de implementación'
+            text: null
         },
 
         // Zoom para el mapa
         mapNavigation: {
-            enabled: true,
+            enabled: false,
             buttonOptions: {
                 verticalAlign: 'bottom'
             }
         },
+        
+        // Eliminamos los créditos de highmaps
+        credits: {
+            enabled: false
+        },
 
         // Colores aplicados en el mapa
         colorAxis: {
-                // Rango mínimo y máximo de visitas
+                // Rango mínimo y máximo
                 min: 0,
                 max: 100,         
                 // Colores aplicados al rango de valores anterior
-                minColor: '#eeeeee',
-                maxColor: '#FDBB30'
+                minColor: '#707070',
+                maxColor: '#fed136'
         },
 
         series: [
@@ -74,17 +50,25 @@ $(function () {
                 data: data,
                 // Cargamos el fichero geojson que se encarga de pintar el mapa
                 mapData: Highcharts.maps['countries/es/es-all'],
+                //Color de las provincias sin datos
+                nullColor: '#777',
+                //ancho del borde entre provincias
+                borderWidth: 1, 
+                //color del borde entre provincias
+                borderColor: 'white',
                 joinBy: 'hc-key',
-                name: 'Visitas',
+                name: 'Porcentaje',
+                //color de la serie
+                color: '#fed136',
                 states: {
                     hover: {
                         color: '#ccc'
                     }
                 },
                 dataLabels: {
-                    enabled: true,
+                    enabled: false, //poner el nombre de las provincias o no
                     format: '{point.name}'
-                }
+                },
             }, 
             {
                 // Separador para las Islas Canarias
@@ -92,7 +76,7 @@ $(function () {
                 type: 'mapline',
                 data: Highcharts.geojson(Highcharts.maps['countries/es/es-all'], 'mapline'),
                 color: '#FDBB30',
-                showInLegend: true,
+                showInLegend: false,
                 enableMouseTracking: false
         }]
     });

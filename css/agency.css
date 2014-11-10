@@ -57,6 +57,27 @@ h6 {
     font-weight: 700;
 }
 
+.atributos-highmaps-contenedor {
+    position: relative;
+    width: 95%;
+    padding-bottom: 100%;
+    margin: auto;
+}
+ 
+.atributos-highmaps {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+@media(min-width:659px) {
+    .atributos-highmaps-contenedor {
+        width: 625px;
+        height: 625px;
+        padding-bottom: 0px;
+    }
+}
+
 .common-charts{
     width:80%;
     margin: auto;
@@ -72,28 +93,6 @@ h6 {
     .imagen-datafakka {
     width: 344px;
     }
-}
-
-.atributos-mapa {
-    width: 95%;
-    height: 0%;
-}
-
-@media(min-width:659px) {
-    .atributos-mapa {
-        width: 625px;
-    }
-}
-
-/*http://www.pepemolina.com/index.php?titulo=SVG%3A+Mapa+de+Espa%F1a*/
-/*http://www.pepemolina.com/diario.jocker.php?extra=info_hispano&provincia=Madrid*/
-.atributos-provincias {
-    fill: #777;
-}
-
-/*<set attributeName="stroke" from="#00FF00" to="#000000" begin="mouseover" end="mouseout"></set>*/
-.atributos-provincias:hover {
-    fill: #fed136;
 }
 
 .img-centered {
