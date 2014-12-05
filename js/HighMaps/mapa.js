@@ -5,7 +5,12 @@ $(function () {
         {
             'hc-key': 'es-m',
             value: 70,
-            idtogo:'#portfolioModal1'
+            idtogo:'#portfolioModalMadrid'
+        },
+        {
+            'hc-key': 'es-sg',
+            value: 35,
+            idtogo:'#portfolioModalSegovia'
         },
         {
             'hc-key': 'es-pm',
