@@ -1,13 +1,18 @@
 $(function () {
     // Preparamos los datos a mostrar en el mapa
     // 'hc-key' es el 'id' de cada provincia en el fichero geojson
-    var data = [{
-        'hc-key': 'es-m',
-        value: 70,
-        events: {
-            click: function() {$('#portfolioModal1').modal('show');}
+    var data = [
+        {
+            'hc-key': 'es-m',
+            value: 70,
+            idtogo:'#portfolioModal1'
+        },
+        {
+            'hc-key': 'es-pm',
+            value: 0,
+            idtogo:null
         }
-    }];
+    ];
 
 
     // Creamos el mapa
@@ -41,7 +46,37 @@ $(function () {
                 max: 100,         
                 // Colores aplicados al rango de valores anterior
                 minColor: '#707070',
-                maxColor: '#fed136'
+                maxColor: '#0058ff'
+        },
+        
+        //deshabilita el popup
+        tooltip: {
+            enabled: false
+        },
+        
+        plotOptions: {
+            series: {
+                point: {
+                    events: {
+                        click: function () {
+                            $(this.options.idtogo).modal('show');
+                        }
+                    }
+                },
+                states: {
+                    hover: {
+                        color: '#fed136'
+                    }
+                },
+                //Color de las provincias sin datos
+                nullColor: '#777',
+                //ancho del borde entre provincias
+                borderWidth: 1, 
+                //color del borde entre provincias
+                borderColor: 'white',
+                //color de la serie
+                color: '#fed136',
+            }
         },
 
         series: [
@@ -50,25 +85,12 @@ $(function () {
                 data: data,
                 // Cargamos el fichero geojson que se encarga de pintar el mapa
                 mapData: Highcharts.maps['countries/es/es-all'],
-                //Color de las provincias sin datos
-                nullColor: '#777',
-                //ancho del borde entre provincias
-                borderWidth: 1, 
-                //color del borde entre provincias
-                borderColor: 'white',
                 joinBy: 'hc-key',
                 name: 'Porcentaje',
-                //color de la serie
-                color: '#fed136',
-                states: {
-                    hover: {
-                        color: '#ccc'
-                    }
-                },
                 dataLabels: {
                     enabled: false, //poner el nombre de las provincias o no
                     format: '{point.name}'
-                },
+                }
             }, 
             {
                 // Separador para las Islas Canarias
@@ -79,5 +101,14 @@ $(function () {
                 showInLegend: false,
                 enableMouseTracking: false
         }]
+    },
+    function(chart){
+        $.each(chart.series[0].data,function(i,point){
+            if(point.options.value>0){ 
+                point.graphic.attr({
+                    cursor: 'pointer'
+                });
+            }
+        });
     });
 });
