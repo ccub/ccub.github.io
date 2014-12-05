@@ -1,6 +1,6 @@
 $(document).ready(function() {
 			
-			var options = {
+			var optionsMaster = {
 				chart: {
 					renderTo: '',
 					type: ''
@@ -22,12 +22,16 @@ $(document).ready(function() {
 				series: []
 			};
     
-                options.chart.renderTo="containerSegovia";
+            var dataFiles = ["Segovia","Madrid"];
+
+            $.each(dataFiles, function(dataFilesItemNo, dataFilesItem) {
+                
+                var options = jQuery.extend(true, {}, optionsMaster);
+                
+                options.chart.renderTo="container"+dataFilesItem;
                 options.chart.type="column";
-                options.xAxis.categories=[];
-                options.series=[];
     
-                $.get('data/segovia.csv', function(data) {
+                $.get('data/'+dataFilesItem+'.csv', function(data) {
                     // Split the lines
                     var lines = data.split('\n');
                     $.each(lines, function(lineNo, line) {
@@ -70,8 +74,7 @@ $(document).ready(function() {
 
                     });
 
-                    var chart = new Highcharts.Chart(options);
-                });
-			
-			
+                    new Highcharts.Chart(options);
+                });      
+            });			
 		});
