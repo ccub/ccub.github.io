@@ -29,7 +29,7 @@ $(document).ready(function() {
                 var options = jQuery.extend(true, {}, optionsMaster);
                 
                 options.chart.renderTo="container"+dataFilesItem;
-                options.chart.type="column";
+                
     
                 $.get('data/'+dataFilesItem+'.csv', function(data) {
                     // Split the lines
@@ -37,7 +37,11 @@ $(document).ready(function() {
                     $.each(lines, function(lineNo, line) {
                         var items = line.split(';');
 
-                        if (items[0].valueOf() == "titulo grafico") {
+                        if (items[0].valueOf() == "tipo de grafico") {
+                            options.chart.type=items[1];
+                        }
+                        
+                        else if (items[0].valueOf() == "titulo grafico") {
                             options.title.text=items[1];
                         }
 
