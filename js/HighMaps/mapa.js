@@ -5,12 +5,17 @@ $(function () {
         {
             'hc-key': 'es-m',
             value: 70,
-            idtogo:'#portfolioModalMadrid'
+            idtogo:'#desplegableModalMadrid'
         },
         {
             'hc-key': 'es-sg',
             value: 35,
-            idtogo:'#portfolioModalSegovia'
+            idtogo:'#desplegableModalSegovia'
+        },
+        {
+            'hc-key': 'es-cr',
+            value: 35,
+            idtogo:'#desplegableModalCiudadReal'
         },
         {
             'hc-key': 'es-pm',
