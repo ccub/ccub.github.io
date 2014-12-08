@@ -57,6 +57,131 @@ h6 {
     font-weight: 700;
 }
 
+/*.infobox_v2 a {
+    color: #0645AD;
+}*/
+
+/* CSS para infoboxes */
+.infobox {
+    border: 1px solid #aaa;
+    background-color: #f9f9f9;
+    color: #000;
+    margin-bottom: 0.7em;
+    margin-left: 1.2em;
+    padding: 0.2em;
+    float: right;
+    clear: right;
+}
+ 
+.infobox td, .infobox th,
+.infobox_v2 td, .infobox_v2 th {
+    vertical-align: top;
+}
+ 
+.infobox caption {
+    font-size: larger;
+    margin-left: inherit;
+}
+ 
+/* ===== infoboxes V2 ("nuevas") ==== */
+.infobox_v2 {
+    border: 1px solid #B4BBC8;
+    background-color: #f9f9f9;
+    color: #000;
+    margin: .5em 0 .7em 1.2em;
+    padding: .4em;
+    clear: right;
+    float: right;
+    font-size: 90%;
+    line-height: 1.5em;
+    width: 22.5em
+}
+ 
+.infobox_v2 .cabecera {
+    font-size: 140%;
+    font-weight: bolder;
+    height: 45px;
+    line-height: 1.2em;
+    text-align: center;
+    vertical-align: middle
+}
+ 
+.infobox_v2 .media {
+    font-weight: bolder;
+    height: 35px;
+    text-align: center;
+    vertical-align: middle
+}
+ 
+/* Códigos para tipos específicos de infoboxes */
+.infobox.bordered {
+    border-collapse: collapse;
+}
+.infobox.bordered td,
+.infobox.bordered th {
+    border: 1px solid #B4BBC8;
+}
+.infobox.bordered .borderless td,
+.infobox.bordered .borderless th {
+    border: 0;
+}
+ 
+.infobox.sisterproject {
+    width: 20em;
+    font-size: 90%;
+}
+ 
+.infobox.geography,
+.infobox_v2.geography {
+    text-align: left;
+    border-collapse: collapse;
+    line-height: 1.2em;
+    font-size: 90%;
+    border: solid 1px #B4BBC8;
+}
+ 
+.infobox.geography td,
+.infobox.geography th,
+.infobox_v2.geography td,
+.infobox_v2.geography th {
+    border-top: solid 1px #B4BBC8;
+    padding: .4em .6em;
+}
+ 
+.infobox.geography .mergedtoprow td,
+.infobox.geography .mergedtoprow th,
+.infobox_v2.geography .mergedtoprow td,
+.infobox_v2.geography .mergedtoprow th {
+    border-top: solid 1px #B4BBC8;
+    padding: .4em .6em .2em .6em;
+}
+ 
+.infobox.geography .mergedrow td,
+.infobox.geography .mergedrow th,
+.infobox_v2.geography .mergedrow td,
+.infobox_v2.geography .mergedrow td {
+    border: 0;
+    padding: 0 .6em .2em .6em;
+}
+ 
+.infobox.geography .mergedbottomrow td,
+.infobox.geography .mergedbottomrow th,
+.infobox_v2.geography .mergedbottomrow td,
+.infobox_v2.geography .mergedbottomrow th {
+    border-top: 0;
+    border-bottom: solid 1px #B4BBC8;
+    padding: 0 .6em .4em .6em;
+}
+ 
+.infobox.geography .maptable td,
+.infobox.geography .maptable th,
+.infobox_v2.geography .maptable td,
+.infobox_v2.geography .maptable th {
+    border: 0;
+    padding: 0;
+}
+/*FIN INFOBOX*/
+
 .atributos-highmaps-contenedor {
     position: relative;
     width: 95%;

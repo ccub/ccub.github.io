@@ -1,0 +1,879 @@
+/* Common CSS para todas las pieles */
+
+/* Arregla problemas interlineado para <sup> y <sub> */
+sup, sub {
+    line-height: 1em;
+}
+ 
+/* Ocultar título, categorías, fecha de la última edición y posibles errores en la Portada */
+body.page-Wikipedia_Portada .firstHeading,
+body.page-Wikipedia_Portada .pagetitle,
+body.page-Wikipedia_Portada .subtitle,
+body.page-Wikipedia_Portada #ca-unprotect,
+body.page-Wikipedia_Portada #ca-move,
+body.page-Wikipedia_Portada #ca-delete,
+body.page-Wikipedia_Portada #mytabs,
+body.page-Wikipedia_Portada #tw-BR,
+body.page-Wikipedia_Portada #tw-xfd,
+body.page-Wikipedia_Portada #catlinks,
+body.page-Wikipedia_Portada #footer-info-lastmod,
+body.page-Wikipedia_Portada .error {
+    display:none;
+}
+ 
+/* Alineación del texto justificada en la impresión (http://es.wikipedia.org?diff=60114364) */
+@media print {
+    #bodyContent {
+        text-align: justify
+    }
+}
+ 
+/* Arreglando tamaño de fuente en etiquetas <syntaxhighlight> (<source>) y páginas .css y .js.
+   [[Bugzilla:26204]] */
+div.mw-geshi div,
+div.mw-geshi div pre,
+span.mw-geshi,
+pre.source-css,
+pre.source-javascript {
+    font-family: monospace, Courier !important;
+}
+ 
+/* Tamaño fuente de referencias */
+ol.references,
+div.listaref,
+div.refcomienza {
+    font-size: 90%;            /* Default font-size */
+    margin-bottom: 0.5em;
+}
+div.listaref ol.references {
+    font-size: 100%;           /* Reset font-size when nested in div.listaref */
+    list-style-type: inherit;  /* Enable custom list style types */
+}
+ 
+/* Colorea de azul al clickear referencias */
+ol.references > li:target,
+sup.reference:target,
+span.citation:target, cite:target {
+    background-color: #DEF;
+}
+ 
+/* Las referencias ahora no pueden ser texto en negrita o italico */
+sup.reference {
+    font-weight: normal;
+    font-style: normal;
+}
+ 
+/* Estilo para citación */
+.citation {
+    word-wrap: break-word;
+}
+ 
+/* For linked citation numbers and document IDs, where
+   the number need not be shown on a screen or a handheld,
+   but should be included in the printed version */
+@media screen, handheld {
+    .citation .printonly {
+        display: none;
+    }
+}
+ 
+/* Llamadas al pie: Quitar corchetes */
+.corchete-llamada {display: none}
+ 
+/* Estilo para enlaces a redirecciones desde páginas especiales */
+.redirect-in-category, .allpagesredirect a {
+    color: gray;
+}
+ 
+/* CSS para infoboxes */
+.infobox {
+    border: 1px solid #aaa;
+    background-color: #f9f9f9;
+    color: #000;
+    margin-bottom: 0.7em;
+    margin-left: 1.2em;
+    padding: 0.2em;
+    float: right;
+    clear: right;
+}
+ 
+.infobox td, .infobox th,
+.infobox_v2 td, .infobox_v2 th {
+    vertical-align: top;
+}
+ 
+.infobox caption {
+    font-size: larger;
+    margin-left: inherit;
+}
+ 
+/* ===== infoboxes V2 ("nuevas") ==== */
+.infobox_v2 {
+    border: 1px solid #B4BBC8;
+    background-color: #f9f9f9;
+    color: #000;
+    margin: .5em 0 .7em 1.2em;
+    padding: .4em;
+    clear: right;
+    float: right;
+    font-size: 90%;
+    line-height: 1.5em;
+    width: 22.5em
+}
+ 
+.infobox_v2 .cabecera {
+    font-size: 140%;
+    font-weight: bolder;
+    height: 45px;
+    line-height: 1.2em;
+    text-align: center;
+    vertical-align: middle
+}
+ 
+.infobox_v2 .media {
+    font-weight: bolder;
+    height: 35px;
+    text-align: center;
+    vertical-align: middle
+}
+ 
+/* Códigos para tipos específicos de infoboxes */
+.infobox.bordered {
+    border-collapse: collapse;
+}
+.infobox.bordered td,
+.infobox.bordered th {
+    border: 1px solid #B4BBC8;
+}
+.infobox.bordered .borderless td,
+.infobox.bordered .borderless th {
+    border: 0;
+}
+ 
+.infobox.sisterproject {
+    width: 20em;
+    font-size: 90%;
+}
+ 
+.infobox.geography,
+.infobox_v2.geography {
+    text-align: left;
+    border-collapse: collapse;
+    line-height: 1.2em;
+    font-size: 90%;
+    border: solid 1px #B4BBC8;
+}
+ 
+.infobox.geography td,
+.infobox.geography th,
+.infobox_v2.geography td,
+.infobox_v2.geography th {
+    border-top: solid 1px #B4BBC8;
+    padding: .4em .6em;
+}
+ 
+.infobox.geography .mergedtoprow td,
+.infobox.geography .mergedtoprow th,
+.infobox_v2.geography .mergedtoprow td,
+.infobox_v2.geography .mergedtoprow th {
+    border-top: solid 1px #B4BBC8;
+    padding: .4em .6em .2em .6em;
+}
+ 
+.infobox.geography .mergedrow td,
+.infobox.geography .mergedrow th,
+.infobox_v2.geography .mergedrow td,
+.infobox_v2.geography .mergedrow td {
+    border: 0;
+    padding: 0 .6em .2em .6em;
+}
+ 
+.infobox.geography .mergedbottomrow td,
+.infobox.geography .mergedbottomrow th,
+.infobox_v2.geography .mergedbottomrow td,
+.infobox_v2.geography .mergedbottomrow th {
+    border-top: 0;
+    border-bottom: solid 1px #B4BBC8;
+    padding: 0 .6em .4em .6em;
+}
+ 
+.infobox.geography .maptable td,
+.infobox.geography .maptable th,
+.infobox_v2.geography .maptable td,
+.infobox_v2.geography .maptable th {
+    border: 0;
+    padding: 0;
+}
+ 
+/* Gráficos transparentes de cabecera */
+.cabecera.default {}
+ 
+/* Style for horizontal lists (separator following item).
+   Note: hlist formatting will break if the resulting HTML lacks a breakable character
+   between list items. This happens when the following conditions are true:
+   1) The list is made using wiki markup (where HTML is built by parser.php)
+   2) HTMLTidy is disabled or unavailable (such as on Special: pages)
+   In such cases, building lists with .hlist using HTML instead of wiki markup
+   will work around this problem. See also [[Bugzilla:39617]].
+   IE8-specific classes are assigned in [[MediaWiki:Common.js/IEFixes.js]].
+   @source mediawiki.org/wiki/Snippets/Horizontal_lists
+   @revision 3.2 (2013-09-25)
+   @author [[User:Edokter]]
+ */
+.skin-monobook .hlist dl,
+.skin-modern .hlist dl,
+.skin-vector .hlist dl {
+    line-height: 1.5em;
+}
+.hlist dl,
+.hlist ol,
+.hlist ul {
+    margin: 0;
+    padding: 0;
+}
+/* Display list items inline and make them nowrap */
+.hlist dd,
+.hlist dt,
+.hlist li {
+    margin: 0;
+    display: inline;
+    white-space: nowrap;
+}
+/* Allow wrapping for list items (in tight spaces) */
+.hlist.hwrap dd,
+.hlist.hwrap dt,
+.hlist.hwrap li {
+    white-space: normal;
+}
+/* Display nested lists inline and allow them to wrap */
+.hlist dl dl, .hlist dl ol, .hlist dl ul,
+.hlist ol dl, .hlist ol ol, .hlist ol ul,
+.hlist ul dl, .hlist ul ol, .hlist ul ul {
+    display: inline;
+    white-space: normal;
+}
+/* Generate interpuncts */
+.hlist dt:after {
+    content: ":";
+}
+.hlist dd:after,
+.hlist li:after {
+    content: " ·";
+    font-weight: bold;
+}
+.hlist dd:last-child:after,
+.hlist dt:last-child:after,
+.hlist li:last-child:after {
+    content: none;
+}
+/* For IE8 */
+.hlist dd.hlist-last-child:after,
+.hlist dt.hlist-last-child:after,
+.hlist li.hlist-last-child:after {
+    content: none;
+}
+/* Add parentheses around nested lists */
+.hlist dd dd:first-child:before, .hlist dd dt:first-child:before, .hlist dd li:first-child:before,
+.hlist dt dd:first-child:before, .hlist dt dt:first-child:before, .hlist dt li:first-child:before,
+.hlist li dd:first-child:before, .hlist li dt:first-child:before, .hlist li li:first-child:before {
+    content: "(";
+    font-weight: normal;
+}
+.hlist dd dd:last-child:after, .hlist dd dt:last-child:after, .hlist dd li:last-child:after,
+.hlist dt dd:last-child:after, .hlist dt dt:last-child:after, .hlist dt li:last-child:after,
+.hlist li dd:last-child:after, .hlist li dt:last-child:after, .hlist li li:last-child:after {
+    content: ")";
+    font-weight: normal;
+}
+/* For IE8 */
+.hlist dd dd.hlist-last-child:after, .hlist dd dt.hlist-last-child:after, .hlist dd li.hlist-last-child:after,
+.hlist dt dd.hlist-last-child:after, .hlist dt dt.hlist-last-child:after, .hlist dt li.hlist-last-child:after,
+.hlist li dd.hlist-last-child:after, .hlist li dt.hlist-last-child:after, .hlist li li.hlist-last-child:after {
+    content: ")";
+    font-weight: normal;
+}
+/* Put ordinals in front of ordered list items */
+.hlist ol {
+    counter-reset: list-item;
+}
+.hlist ol > li {
+    counter-increment: list-item;
+}
+.hlist ol > li:before {
+    content: counter(list-item) " ";
+}
+.hlist dd ol > li:first-child:before,
+.hlist dt ol > li:first-child:before,
+.hlist li ol > li:first-child:before {
+    content: "(" counter(list-item) " ";
+}
+ 
+/* Unbulleted lists */
+.plainlist ul {
+    line-height: inherit;
+    list-style: none none;
+    margin: 0;
+}
+.plainlist ul li {
+    margin-bottom: 0;
+}
+ 
+/* Definición para imágenes y otros elementos flotantes */
+div.floatright {
+    float: right;
+    clear: right;
+    position: relative;
+    margin: 0.2em 0 0.8em 1.4em;
+    }
+div.floatleft {
+    float: left;
+    clear: left;
+    position: relative;
+    margin: 0.2em 1.4em 0.8em 0;
+    }
+ 
+/* Default style for navigation boxes */
+.navbox {                     /* Navbox container style */
+    border: 1px solid #aaa;
+    width: 100%;
+    margin: auto;
+    clear: both;
+    font-size: 88%;
+    text-align: center;
+    padding: 1px;
+}
+.navbox-inner,
+.navbox-subgroup {
+    width: 100%;
+}
+.navbox-group,
+.navbox-title,
+.navbox-abovebelow {
+    padding: 0.25em 1em;      /* Title, group and above/below styles */
+    line-height: 1.5em;
+    text-align: center;
+}
+th.navbox-group {             /* Group style */
+    white-space: nowrap;
+    /* @noflip */
+    text-align: right;
+}
+.navbox,
+.navbox-subgroup {
+    background: #fdfdfd;      /* Background color */
+}
+.navbox-list {
+    line-height: 1.8em;
+    border-color: #fdfdfd;    /* Must match background color */
+}
+.navbox th,
+.navbox-title {
+    background: #ccccff;      /* Level 1 color */
+}
+.navbox-abovebelow,
+th.navbox-group,
+.navbox-subgroup .navbox-title {
+    background: #ddddff;      /* Level 2 color */
+}
+.navbox-subgroup .navbox-group,
+.navbox-subgroup .navbox-abovebelow {
+    background: #e6e6ff;      /* Level 3 color */
+}
+.navbox-even {
+    background: #f7f7f7;      /* Even row striping */
+}
+.navbox-odd {
+    background: transparent;  /* Odd row striping */
+}
+table.navbox + table.navbox {  /* Single pixel border between adjacent navboxes */
+    margin-top: -1px;          /* (doesn't work for IE6, but that's okay)       */
+}
+.navbox .hlist td dl,
+.navbox .hlist td ol,
+.navbox .hlist td ul,
+.navbox td.hlist dl,
+.navbox td.hlist ol,
+.navbox td.hlist ul {
+    padding: 0.125em 0;       /* Adjust hlist padding in navboxes */
+}
+ol + table.navbox,
+ul + table.navbox {
+    margin-top: 0.5em;        /* Prevent lists from clinging to navboxes */
+}
+ 
+/* Default styling for Navbar template */
+.navbar {
+    display: inline;
+    font-size: 88%;
+    font-weight: normal;
+}
+.navbar ul {
+    display: inline;
+    white-space: nowrap;
+}
+.navbar li {
+    word-spacing: -0.125em;
+}
+.navbar.mini li span {
+  font-variant: small-caps;
+}
+/* Navbar styling when nested in infobox and navbox */
+.infobox .navbar {
+    font-size: 100%;
+}
+.navbox .navbar {
+    display: block;
+    font-size: 100%;
+}
+.navbox-title .navbar {
+    /* @noflip */
+    float: left;
+    /* @noflip */
+    text-align: left;
+    /* @noflip */
+    margin-right: 0.5em;
+    width: 6em;
+}
+ 
+/* 'show'/'hide' buttons created dynamically by the CollapsibleTables javascript
+   in [[MediaWiki:Common.js]] are styled here so they can be customised. */
+.collapseButton {
+    /* @noflip */
+    float: right;
+    font-weight: normal;
+    /* @noflip */
+    margin-left: 0.5em;
+    /* @noflip */
+    text-align: right;
+    width: auto;
+}
+/* In navboxes, the show/hide button balances the v·d·e links
+   from [[Template:Navbar]], so they need to be the same width. */
+.navbox .collapseButton {
+    width: 6em;
+}
+ 
+/* =========================================
+  ===== PLEGABLES (mediawiki 1.18+ ) ========
+  ==========================================
+Mediawiki 1.18 introdujo un nuevo sistema nativo de plegables.
+Este es el CSS para personalizarlo y eventualmente reemplazar
+al laberinto NavHead, NavFrame, NavToggle, NavContent, etc. */
+ 
+/* Styling for JQuery makeCollapsible, matching that of collapseButton */
+.mw-collapsible-toggle {
+    font-weight: normal;
+    /* @noflip */
+    text-align: right;
+    font-size: 90%;
+}
+.navbox .mw-collapsible-toggle {
+    width: 6em;
+}
+ 
+/* Change the external link icon to an Adobe icon for all PDF files
+   in browsers that support these CSS selectors, like Mozilla and Opera */
+#content a[href$=".pdf"].external, 
+#content a[href*=".pdf?"].external, 
+#content a[href*=".pdf#"].external,
+#content a[href$=".PDF"].external, 
+#content a[href*=".PDF?"].external, 
+#content a[href*=".PDF#"].external,
+#mw_content a[href$=".pdf"].external, 
+#mw_content a[href*=".pdf?"].external, 
+#mw_content a[href*=".pdf#"].external,
+#mw_content a[href$=".PDF"].external, 
+#mw_content a[href*=".PDF?"].external, 
+#mw_content a[href*=".PDF#"].external {
+    /* @embed */
+    background: url("//upload.wikimedia.org/wikipedia/commons/2/23/Icons-mini-file_acrobat.gif") no-repeat right;
+    /* @noflip */
+    padding-right: 18px;
+}
+ 
+ 
+/* CSS relacionado con el uso de coordenadas
+ 
+To display coordinates using the notation in the source code, write this in your User:Username/monobook.css:
+    .geo-default {display: inline} .geo-nondefault {display: none}
+    .geo-dec {display: inline} .geo-dms {display: inline}
+ To display coordinates using decimal notation, write this in your User:Username/monobook.css:
+    .geo-default {display: inline} .geo-nondefault {display: inline}
+    .geo-dec {display: inline} .geo-dms {display: none}
+ To display coordinates using DMS notation, write this in your User:Username/monobook.css:
+    .geo-default {display: inline} .geo-nondefault {display: inline}
+    .geo-dec {display: none}    .geo-dms {display: inline}
+ To display coordinates in both decimal and DMS notation, write this in your User:Username/monobook.css:
+    .geo-default {display: inline} .geo-nondefault {display: inline}
+    .geo-dec {display: inline}    .geo-dms {display: inline}
+    .geo-multi-punct {display: inline}
+ See [[Plantilla:Coor link]] for how these are used.
+Note that the classes "geo", "longitude", and "latitude" are not just styles but also used by the [[Geo microformat]], so the names should not be changed.
+*/
+ 
+/* CSS predeterminado, puede modificarse usando las reglas de arriba */
+.geo-default, .geo-dms, .geo-dec  { display: inline; }
+.geo-nondefault, .geo-multi-punct { display: none; }
+.longitude, .latitude { white-space: nowrap; }
+ 
+/* This is used for the Geo microformat, but no style is needed for now other than .geo-dec. */
+.geo {}
+ 
+/* Plantilla de cita */
+.citado {
+    font-size: 90%;
+    background-color: #F9F9F9;
+    padding: 5px 10px;
+}
+ 
+/* Estilos para sitenotice y similares */
+.notice {
+    text-align: justify;
+    margin: 1em;
+    padding: 0.2em;
+}
+ 
+/* Ocultar texto para los no bibliotecarios */
+.para_biblios {display: none}
+ 
+/* Prevent floating boxes from overlapping any category listings,
+   file histories, edit previews, and edit [Show changes] views */
+#mw-subcategories, #mw-pages, #mw-category-media, 
+#filehistory, #wikiPreview, #wikiDiff {
+    clear: both;
+}
+ 
+/*InterProject */
+.interProject {
+    display:none;
+    clear: both;
+    border-top: 2px dotted #aaa;
+    margin-top: 2em;
+}
+ 
+/* CSS para plegables, documentación en [[:en:Wikipedia:NavFrame]] */
+div.NavFrame {
+    margin: 0;
+    padding: 4px;
+    border: 1px solid #aaa;
+    text-align: center;
+    border-collapse: collapse;
+    font-size: 95%;
+}
+div.NavFrame + div.NavFrame {
+    border-top-style: none;
+    border-top-style: hidden;
+}
+div.NavPic {
+    background-color: #fff;
+    margin: 0;
+    padding: 2px;
+    float: left;
+}
+div.NavFrame div.NavHead {
+    height: 1.6em;
+    font-weight: bold;
+    background-color: #ccf;
+    position: relative;
+}
+div.NavFrame p,
+div.NavFrame div.NavContent,
+div.NavFrame div.NavContent p {
+    font-size: 100%;
+}
+div.NavEnd {
+    margin: 0;
+    padding: 0;
+    line-height: 1px;
+    clear: both;
+}
+a.NavToggle {
+    position: absolute;
+    top: 0;
+    right: 3px;
+    font-weight: normal;
+    font-size: 90%;
+}
+ 
+/* Hatnotes and disambiguation notices */
+.rellink,
+.dablink {
+    font-style: italic;
+    /* @noflip */
+    padding-left: 1.6em;
+    margin-bottom: 0.5em;
+}
+.rellink i,
+.dablink i {
+    font-style: normal;
+}
+ 
+/* Para taxobox, quitar texto en versatilas para referencias */
+table.biota i {
+    font-variant:normal;
+}
+ 
+/* TABLAS */
+ 
+/* Normal font styling for table row headers with scope="row" tag */
+.wikitable.plainrowheaders th[scope=row] {
+    font-weight: normal;
+    /* @noflip */
+    text-align: left;
+}
+ 
+/* lists in data cells are always left-aligned */
+.wikitable td ul,
+.wikitable td ol,
+.wikitable td dl {
+    /* @noflip */
+    text-align: left;
+}
+ 
+/* Tablas alineadas a la izquierda (class="wikitable left") */
+.wikitable.left,
+.toccolours.left {
+    margin: 1em 1.3em 1em 0;
+    float: left;
+    clear: left;
+}
+ 
+/* Tablas alineadas a la derecha (class="wikitable right") */
+.wikitable.right,
+.toccolours.right {
+    margin: 1em 0 1em 1.3em;
+    float: right;
+    clear: right;
+}
+ 
+/* Tablas centradas (class="wikitable center") */
+.wikitable.center,
+.toccolours.center {
+    margin:inherit auto;
+}
+ 
+/** Cajas de aviso son blancas y con
+ * una cinta de color en la parte superior  */
+table.ambox {
+    margin: 0 10%;
+    border-collapse: collapse;
+    background-color: #fbfbfb;
+    border-bottom: 1px solid #aaa;
+    border-left: 1px solid #CCC;
+    border-right: 1px solid #CCC;
+    font-size: 95%;
+}
+ 
+table.ambox th.ambox-text, table.ambox td.ambox-text {
+    padding: 0.25em 0.5em; /* 0.5em left/right */
+    width: 100%; /* Make all templates the same width regardless of text size */
+}
+table.ambox td.ambox-image {
+    padding: 2px 0 2px 0.5em; /* 0.5em left, 0px right */
+    text-align: center;
+}
+table.ambox td.ambox-imageright {
+    padding: 2px 0.5em 2px 0;  /* 0px left, 0.5em right */
+    text-align: center;
+}
+table.ambox-notice {border-top: 5px solid #608EC2}  /* Azul */
+table.ambox-protection {border-top: 5px solid #bba} /* Gris */
+table.ambox-delete,
+table.ambox-serious {border-top: 5px solid #b22222} /* Rojo */
+table.ambox-content {border-top: 5px solid #f28500} /* Naranja */
+table.ambox-style {border-top: 5px solid #f4c430}   /* Amarillo */
+table.ambox-merge {border-top: 5px solid #8c08a4}   /* Purpura */
+table.ambox-growth {border-top: 5px solid #47a30d}  /* Verde */
+ 
+table.ambox.ambox-mini { /* Versión pequeña flotante */
+    float: right;
+    clear: right;
+    margin: 0 0 0 1em;
+    width: 25%;
+}
+ 
+/* Ciertas cajas para discusión que NO son ambox (no tienen cinta de color)
+    por ejemplo, la caja grande de artículo destacado */
+.messagebox {
+    border: 1px solid #aaa;
+    background-color: #f9f9f9;
+    width: 80%;
+    margin: 0 auto 1em auto;
+    padding: .2em;
+}
+.messagebox.merge {
+    border: 1px solid #c0b8cc;
+    background-color: #f0e5ff;
+    text-align: center;
+}
+.messagebox.cleanup {
+    border: 1px solid #9f9fff;
+    background-color: #efefff;
+    text-align: center;
+}
+.messagebox.standard-talk {
+    border: 1px solid #c0c090;
+    background-color: #f8eaba;
+    margin: 4px auto;
+}
+ 
+/** Estilos para tablas.
+    la idea es, si se quiere que la primera columna de la tabla esté alineada
+    a la derecha, la segunda centrada  y la tercera a la izquierda, usar
+    {| class="col1der col2cen col3izq"
+    en vez de repetir "style='text-align:right'", etc, en '''cada''' celda
+    Esto sólo se usa en Medallero. Debería divulgarse para aprovecharlo en más lugares
+**/
+table.col1der TD:first-child {text-align:right}
+table.col1izq TD:first-child {text-align:left}
+table.col1cen TD:first-child {text-align:center}
+ 
+table.col2der TD:first-child + TD {text-align:right}
+table.col2izq TD:first-child + TD {text-align:left}
+table.col2cen TD:first-child + TD {text-align:center}
+ 
+table.col3der TD:first-child + TD + TD {text-align:right}
+table.col3izq TD:first-child + TD + TD {text-align:left}
+table.col3cen TD:first-child + TD + TD {text-align:center}
+ 
+table.col4der TD:first-child + TD + TD + TD {text-align:right}
+table.col4izq TD:first-child + TD + TD + TD {text-align:left}
+table.col4cen TD:first-child + TD + TD + TD {text-align:center}
+ 
+table.col5der TD:first-child + TD + TD + TD + TD {text-align:right}
+table.col5izq TD:first-child + TD + TD + TD + TD {text-align:left}
+table.col5cen TD:first-child + TD + TD + TD + TD {text-align:center}
+ 
+table.col6der TD:first-child + TD + TD + TD + TD + TD {text-align:right}
+table.col6izq TD:first-child + TD + TD + TD + TD + TD {text-align:left}
+table.col6cen TD:first-child + TD + TD + TD + TD + TD {text-align:center}
+ 
+table.col7der TD:first-child + TD + TD + TD + TD + TD + TD {text-align:right}
+table.col7izq TD:first-child + TD + TD + TD + TD + TD + TD {text-align:left}
+table.col7cen TD:first-child + TD + TD + TD + TD + TD + TD {text-align:center}
+ 
+table.col8der TD:first-child + TD + TD + TD + TD + TD + TD + TD {text-align:right}
+table.col8izq TD:first-child + TD + TD + TD + TD + TD + TD + TD {text-align:left}
+table.col8cen TD:first-child + TD + TD + TD + TD + TD + TD + TD {text-align:center}
+ 
+table.col9der TD:first-child + TD + TD + TD + TD + TD + TD + TD + TD {text-align:right}
+table.col9izq TD:first-child + TD + TD + TD + TD + TD + TD + TD + TD {text-align:left}
+table.col9cen TD:first-child + TD + TD + TD + TD + TD + TD + TD + TD {text-align:center}
+ 
+/* The backgrounds for galleries. */
+#content .gallerybox div.thumb {
+    background-color: #F9F9F9;   /* Light gray padding */
+}
+/* Put a chequered background behind images, only visible if they have transparency */
+.gallerybox .thumb img {
+    /* @embed */
+    background: white url("//upload.wikimedia.org/wikipedia/commons/5/5d/Checker-16x16.png") repeat;
+}
+/* But not on articles, user pages, portals or with opt-out. */
+.ns-0 .gallerybox .thumb img,
+.ns-2 .gallerybox .thumb img,
+.ns-100 .gallerybox .thumb img, 
+.nochecker .gallerybox .thumb img {
+    background: white;
+}
+ 
+.abbr {/* al estilo de la etiqueta <abbr> */
+     cursor: help;
+     border-bottom: 1px dotted #000;
+}
+ 
+/* Aviso en espacios de trabajo de usuarios */
+ 
+body.ns-2 #contentSub > span.subpages:before,
+body.ns-3 #contentSub > span.subpages:before {
+   content: " ¡Atención! Este no es un artículo enciclopédico, sino un espacio de trabajo personal. ";
+   background: #fe9;
+   border: 2px solid #f0c91f;
+   display: block;
+   text-align: center;
+   color: maroon;
+   margin-bottom: 2mm;
+   line-height: 120%;
+}
+ 
+/* Estilo para las etiquetas del filtro de edición */
+.mw-tag-marker {
+ font-family:sans-serif;
+ font-style:italic;
+ font-size:90%;
+ background-color:#FFE599;
+}
+ 
+/* Estilo para los avisos de los filtros antiabusos */
+.aviso_filtro {
+   border: 1px solid #848484;
+   margin: 19px 14px 19px 14px;
+   padding: 0.8em 1.2em 0.8em 1.2em;
+}
+ 
+/* El vandalismo debe ser particularmente distinguible */
+.mw-tag-marker-posible_vandalismo, .mw-tag-marker-botspam {
+    background-color:#FEC29C;
+}
+ 
+/* Allow limiting of which header levels are shown in a TOC;
+   <div class="toclimit-3">, for instance, will limit to
+   showing ==headings== and ===headings=== but no further
+   (as long as there are no =headings= on the page, which
+   there shouldn't be according to the MoS).
+ */
+.toclimit-2 .toclevel-1 ul,
+.toclimit-3 .toclevel-2 ul,
+.toclimit-4 .toclevel-3 ul,
+.toclimit-5 .toclevel-4 ul,
+.toclimit-6 .toclevel-5 ul,
+.toclimit-7 .toclevel-6 ul {
+    display: none;
+}
+ 
+/* Prevent line breaks in silly places: 
+   1) Where desired
+   2) Links when we don't want them to
+   3) Bold "links" to the page itself
+   4) HTML formulae
+   5) Ref tags with group names <ref group="Note"> --> "[Note 1]"
+*/
+.nowrap,
+.nowraplinks a,
+.nowraplinks .selflink,
+span.texhtml,
+sup.reference a { 
+    white-space: nowrap;
+}
+ 
+/* Hide the mobile wlm banner on the normal site */
+#mf-wlm-banner { display: none; }
+ 
+/* Muestra las plantillas de la extensión Babel sin el float ni formato alguno, retirando el recuadro que viene por defecto.
+   Fuente: https://meta.wikimedia.org/w/index.php?title=MediaWiki:Common.css&oldid=4335942
+   Queda pendiente el [[bugzilla:31309]]
+*/
+.babel-plain table.mw-babel-wrapper {
+   float:none;
+   clear:none;
+   margin:0;
+}
+ 
+.babel-plain div.mw-babel-box {
+   margin:0;
+}
+ 
+.babel-plain .mw-babel-header,
+.babel-plain .mw-babel-footer {
+   display:none;
+}
+ 
+/* Configuración específica para Edittools
+   https://es.wikipedia.org/w/index.php?oldid=70299868#Otro_pedido_.28barra_vertical.29
+*/
+#specialchars a {
+   padding: 0.1em;
+   display: inline-block;
+   text-align: center;
+   min-width: 1em;
+ }
