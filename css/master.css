@@ -57,6 +57,18 @@ h6 {
     font-weight: 700;
 }
 
+.containerInfographics{
+    width: 95%;
+    margin: 0 auto;
+    
+}
+
+@media(min-width:700px) {
+    .containerInfographics {
+        width: 700px;
+    }
+}
+
 .atributos-highmaps-contenedor {
     position: relative;
     width: 95%;
