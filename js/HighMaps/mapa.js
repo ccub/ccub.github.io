@@ -1,11 +1,14 @@
 $(function () {
     // Preparamos los datos a mostrar en el mapa
     // 'hc-key' es el 'id' de cada provincia en el fichero geojson
+    
+    //en textoPopup para poner un intro: </b><br><b>
     var data = [
         {
             'hc-key': 'es-m',
-            value: 70,
-            idtogo:'#desplegableModalMadrid'
+            value: 100,
+            idtogo:'#desplegableModalMadrid',
+            textoPopup:'Parque de Guadarrama </b><br><b> Parque de tatata'
         },
         {
             'hc-key': 'es-sg',
@@ -56,12 +59,15 @@ $(function () {
                 max: 100,         
                 // Colores aplicados al rango de valores anterior
                 minColor: '#707070',
-                maxColor: '#0058ff'
+                maxColor: '#13a82f'
         },
         
         //deshabilita el popup
         tooltip: {
-            enabled: false
+            enabled: true,
+            formatter: function() {
+                return '<b>' + this.point.textoPopup + '</b>';
+            }
         },
         
         plotOptions: {
