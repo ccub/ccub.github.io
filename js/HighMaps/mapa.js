@@ -18,7 +18,75 @@ $(function () {
         {
             'hc-key': 'es-cr',
             value: 35,
-            idtogo:'#desplegableModalCiudadReal'
+            idtogo:'#desplegableModalCiudadReal',
+            textoPopup:'Cabañeros'
+        },
+        {
+            'hc-key': 'es-l',
+            value: 35,
+            idtogo:'#desplegableModalLerida',
+            textoPopup:'Aigüestortes i Estany de Sant Maurici</b><br><b>Archipiélago de Cabrera'
+        },
+        {
+            'hc-key': 'es-gc',
+            value: 35,
+            idtogo:'#desplegableModalLasPalmas',
+            textoPopup:'Caldera de Taburiente'
+        },
+                //Andalucía
+                {
+                    'hc-key': 'es-se',
+                    value: 35,
+                    idtogo:'#desplegableModalAndalucia',
+                    textoPopup:'Doñana</b><br><b>Sierra Nevada'
+                },
+                {
+                    'hc-key': 'es-co',
+                    value: 35,
+                    idtogo:'#desplegableModalAndalucia',
+                    textoPopup:'Doñana</b><br><b>Sierra Nevada'
+                },
+                {
+                    'hc-key': 'es-ma',
+                    value: 35,
+                    idtogo:'#desplegableModalAndalucia',
+                    textoPopup:'Doñana</b><br><b>Sierra Nevada'
+                },
+                {
+                    'hc-key': 'es-h',
+                    value: 35,
+                    idtogo:'#desplegableModalAndalucia',
+                    textoPopup:'Doñana</b><br><b>Sierra Nevada'
+                },
+                {
+                    'hc-key': 'es-al',
+                    value: 35,
+                    idtogo:'#desplegableModalAndalucia',
+                    textoPopup:'Doñana</b><br><b>Sierra Nevada'
+                },
+                {
+                    'hc-key': 'es-ca',
+                    value: 35,
+                    idtogo:'#desplegableModalAndalucia',
+                    textoPopup:'Doñana</b><br><b>Sierra Nevada'
+                },
+                {
+                    'hc-key': 'es-j',
+                    value: 35,
+                    idtogo:'#desplegableModalAndalucia',
+                    textoPopup:'Doñana</b><br><b>Sierra Nevada'
+                },
+                {
+                    'hc-key': 'es-gr',
+                    value: 35,
+                    idtogo:'#desplegableModalAndalucia',
+                    textoPopup:'Doñana</b><br><b>Sierra Nevada'
+                },
+        {
+            'hc-key': 'es-tf',
+            value: 35,
+            idtogo:'#desplegableModalTenerife',
+            textoPopup:'Garajonay'
         },
         {
             'hc-key': 'es-pm',
