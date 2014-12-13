@@ -13,10 +13,35 @@ $(function () {
             idtogo:'#desplegableModalMadrid',
             textoPopup:'Parque de Guadarrama<br>Parque de tatata'
         },
+        //Castilla la Mancha
+        {
+            'hc-key': 'es-to',
+            value: 20,
+            idtogo:'#desplegableModalCastillaLaMancha',
+            textoPopup:'Cabañeros<br>Tablas de Daimiel'
+        },
+        {
+            'hc-key': 'es-gu',
+            value: 20,
+            idtogo:'#desplegableModalCastillaLaMancha',
+            textoPopup:'Cabañeros<br>Tablas de Daimiel'
+        },
+        {
+            'hc-key': 'es-ab',
+            value: 20,
+            idtogo:'#desplegableModalCastillaLaMancha',
+            textoPopup:'Cabañeros<br>Tablas de Daimiel'
+        },
+        {
+            'hc-key': 'es-cu',
+            value: 20,
+            idtogo:'#desplegableModalCastillaLaMancha',
+            textoPopup:'Cabañeros<br>Tablas de Daimiel'
+        },
         {
             'hc-key': 'es-cr',
             value: 20,
-            idtogo:'#desplegableModalCiudadReal',
+            idtogo:'#desplegableModalCastillaLaMancha',
             textoPopup:'Cabañeros<br>Tablas de Daimiel'
         },
             //Cataluna
