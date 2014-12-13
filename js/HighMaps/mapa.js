@@ -247,7 +247,7 @@ $(function () {
         tooltip: {
             enabled: true,
             formatter: function() {
-                return '<b>' + this.point.properties.region + '</b><br>' + this.point.textoPopup;
+                return '<b>' + this.point.properties["woe-name"] + '</b><br>' + this.point.textoPopup;
             }
         },
         
