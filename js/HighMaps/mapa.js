@@ -3,95 +3,183 @@ $(function () {
     // 'hc-key' es el 'id' de cada provincia en el fichero geojson
     
     //en textoPopup para poner un intro: </b><br><b>
+    
+    //15 parques
+    //10 regiones
     var data = [
         {
             'hc-key': 'es-m',
-            value: 100,
+            value: 10,
             idtogo:'#desplegableModalMadrid',
             textoPopup:'Parque de Guadarrama </b><br><b> Parque de tatata'
         },
         {
-            'hc-key': 'es-sg',
-            value: 35,
-            idtogo:'#desplegableModalSegovia'
-        },
-        {
             'hc-key': 'es-cr',
-            value: 35,
+            value: 20,
             idtogo:'#desplegableModalCiudadReal',
-            textoPopup:'Cabañeros'
+            textoPopup:'Cabañeros</b><br><b>Tablas de Daimiel'
         },
-        {
-            'hc-key': 'es-l',
-            value: 35,
-            idtogo:'#desplegableModalLerida',
-            textoPopup:'Aigüestortes i Estany de Sant Maurici</b><br><b>Archipiélago de Cabrera'
-        },
+            //Cataluna
+            {
+                'hc-key': 'es-l',
+                value: 30,
+                idtogo:'#desplegableModalCataluna',
+                textoPopup:'Aigüestortes i Estany de Sant Maurici'
+            },
+            {
+                'hc-key': 'es-t',
+                value: 30,
+                idtogo:'#desplegableModalCataluna',
+                textoPopup:'Aigüestortes i Estany de Sant Maurici'
+            },
+            {
+                'hc-key': 'es-gi',
+                value: 30,
+                idtogo:'#desplegableModalCataluna',
+                textoPopup:'Aigüestortes i Estany de Sant Maurici'
+            },
+            {
+                'hc-key': 'es-b',
+                value: 30,
+                idtogo:'#desplegableModalCataluna',
+                textoPopup:'Aigüestortes i Estany de Sant Maurici'
+            },
         {
             'hc-key': 'es-gc',
-            value: 35,
+            value: 40,
             idtogo:'#desplegableModalLasPalmas',
-            textoPopup:'Caldera de Taburiente'
+            textoPopup:'Caldera de Taburiente</b><br><b>Timanfaya'
         },
                 //Andalucía
                 {
                     'hc-key': 'es-se',
-                    value: 35,
+                    value: 50,
                     idtogo:'#desplegableModalAndalucia',
                     textoPopup:'Doñana</b><br><b>Sierra Nevada'
                 },
                 {
                     'hc-key': 'es-co',
-                    value: 35,
+                    value: 50,
                     idtogo:'#desplegableModalAndalucia',
                     textoPopup:'Doñana</b><br><b>Sierra Nevada'
                 },
                 {
                     'hc-key': 'es-ma',
-                    value: 35,
+                    value: 50,
                     idtogo:'#desplegableModalAndalucia',
                     textoPopup:'Doñana</b><br><b>Sierra Nevada'
                 },
                 {
                     'hc-key': 'es-h',
-                    value: 35,
+                    value: 50,
                     idtogo:'#desplegableModalAndalucia',
                     textoPopup:'Doñana</b><br><b>Sierra Nevada'
                 },
                 {
                     'hc-key': 'es-al',
-                    value: 35,
+                    value: 50,
                     idtogo:'#desplegableModalAndalucia',
                     textoPopup:'Doñana</b><br><b>Sierra Nevada'
                 },
                 {
                     'hc-key': 'es-ca',
-                    value: 35,
+                    value: 50,
                     idtogo:'#desplegableModalAndalucia',
                     textoPopup:'Doñana</b><br><b>Sierra Nevada'
                 },
                 {
                     'hc-key': 'es-j',
-                    value: 35,
+                    value: 50,
                     idtogo:'#desplegableModalAndalucia',
                     textoPopup:'Doñana</b><br><b>Sierra Nevada'
                 },
                 {
                     'hc-key': 'es-gr',
-                    value: 35,
+                    value: 50,
                     idtogo:'#desplegableModalAndalucia',
                     textoPopup:'Doñana</b><br><b>Sierra Nevada'
                 },
         {
             'hc-key': 'es-tf',
-            value: 35,
+            value: 60,
             idtogo:'#desplegableModalTenerife',
-            textoPopup:'Garajonay'
+            textoPopup:'Garajonay</b><br><b>Teide'
+        },
+                //Galicia
+                {
+                    'hc-key': 'es-or',
+                    value: 70,
+                    idtogo:'#desplegableModalGalicia',
+                    textoPopup:'Islas Atlánticas de Galicia'
+                },
+                {
+                    'hc-key': 'es-c',
+                    value: 70,
+                    idtogo:'#desplegableModalGalicia',
+                    textoPopup:'Islas Atlánticas de Galicia'
+                },
+                {
+                    'hc-key': 'es-po',
+                    value: 70,
+                    idtogo:'#desplegableModalGalicia',
+                    textoPopup:'Islas Atlánticas de Galicia'
+                },
+                {
+                    'hc-key': 'es-lu',
+                    value: 70,
+                    idtogo:'#desplegableModalGalicia',
+                    textoPopup:'Islas Atlánticas de Galicia'
+                },
+        //Extremadura
+        {
+            'hc-key': 'es-cc',
+            value: 80,
+            idtogo:'#desplegableModalExtremadura',
+            textoPopup:'Monfragüe'
+        },
+        {
+            'hc-key': 'es-ba',
+            value: 80,
+            idtogo:'#desplegableModalExtremadura',
+            textoPopup:'Monfragüe'
+        },
+                //Aragon
+                {
+                    'hc-key': 'es-hu',
+                    value: 90,
+                    idtogo:'#desplegableModalAragon',
+                    textoPopup:'Ordesa y Monte Perdido'
+                },
+                {
+                    'hc-key': 'es-te',
+                    value: 90,
+                    idtogo:'#desplegableModalAragon',
+                    textoPopup:'Ordesa y Monte Perdido'
+                },
+                {
+                    'hc-key': 'es-z',
+                    value: 90,
+                    idtogo:'#desplegableModalAragon',
+                    textoPopup:'Ordesa y Monte Perdido'
+                },
+        //Cantabria y Asturias
+        {
+            'hc-key': 'es-s',
+            value: 100,
+            idtogo:'#desplegableModalCantabriaYAsturias',
+            textoPopup:'Picos de Europa'
+        },
+        {
+            'hc-key': 'es-o',
+            value: 100,
+            idtogo:'#desplegableModalCantabriaYAsturias',
+            textoPopup:'Picos de Europa'
         },
         {
             'hc-key': 'es-pm',
-            value: 0,
-            idtogo:null
+            value: 100,
+            idtogo:'#desplegableModalBaleares',
+            textoPopup:'Archipiélago de Cabrera'
         }
     ];
 
