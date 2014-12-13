@@ -214,8 +214,8 @@ $(function () {
                 min: 0,
                 max: 100,         
                 // Colores aplicados al rango de valores anterior
-                minColor: '#707070',
-                maxColor: '#13a82f'
+                minColor: '#679373',
+                maxColor: '#007b17'
         },
         
         //deshabilita el popup
