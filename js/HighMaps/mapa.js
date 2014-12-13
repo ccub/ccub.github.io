@@ -11,13 +11,13 @@ $(function () {
             'hc-key': 'es-m',
             value: 10,
             idtogo:'#desplegableModalMadrid',
-            textoPopup:'Parque de Guadarrama </b><br><b> Parque de tatata'
+            textoPopup:'Parque de Guadarrama<br>Parque de tatata'
         },
         {
             'hc-key': 'es-cr',
             value: 20,
             idtogo:'#desplegableModalCiudadReal',
-            textoPopup:'Cabañeros</b><br><b>Tablas de Daimiel'
+            textoPopup:'Cabañeros<br>Tablas de Daimiel'
         },
             //Cataluna
             {
@@ -48,62 +48,62 @@ $(function () {
             'hc-key': 'es-gc',
             value: 40,
             idtogo:'#desplegableModalLasPalmas',
-            textoPopup:'Caldera de Taburiente</b><br><b>Timanfaya'
+            textoPopup:'Caldera de Taburiente<br>Timanfaya'
         },
                 //Andalucía
                 {
                     'hc-key': 'es-se',
                     value: 50,
                     idtogo:'#desplegableModalAndalucia',
-                    textoPopup:'Doñana</b><br><b>Sierra Nevada'
+                    textoPopup:'Doñana<br>Sierra Nevada'
                 },
                 {
                     'hc-key': 'es-co',
                     value: 50,
                     idtogo:'#desplegableModalAndalucia',
-                    textoPopup:'Doñana</b><br><b>Sierra Nevada'
+                    textoPopup:'Doñana<br>Sierra Nevada'
                 },
                 {
                     'hc-key': 'es-ma',
                     value: 50,
                     idtogo:'#desplegableModalAndalucia',
-                    textoPopup:'Doñana</b><br><b>Sierra Nevada'
+                    textoPopup:'Doñana<br>Sierra Nevada'
                 },
                 {
                     'hc-key': 'es-h',
                     value: 50,
                     idtogo:'#desplegableModalAndalucia',
-                    textoPopup:'Doñana</b><br><b>Sierra Nevada'
+                    textoPopup:'Doñana<br>Sierra Nevada'
                 },
                 {
                     'hc-key': 'es-al',
                     value: 50,
                     idtogo:'#desplegableModalAndalucia',
-                    textoPopup:'Doñana</b><br><b>Sierra Nevada'
+                    textoPopup:'Doñana<br>Sierra Nevada'
                 },
                 {
                     'hc-key': 'es-ca',
                     value: 50,
                     idtogo:'#desplegableModalAndalucia',
-                    textoPopup:'Doñana</b><br><b>Sierra Nevada'
+                    textoPopup:'Doñana<br>Sierra Nevada'
                 },
                 {
                     'hc-key': 'es-j',
                     value: 50,
                     idtogo:'#desplegableModalAndalucia',
-                    textoPopup:'Doñana</b><br><b>Sierra Nevada'
+                    textoPopup:'Doñana<br>Sierra Nevada'
                 },
                 {
                     'hc-key': 'es-gr',
                     value: 50,
                     idtogo:'#desplegableModalAndalucia',
-                    textoPopup:'Doñana</b><br><b>Sierra Nevada'
+                    textoPopup:'Doñana<br>Sierra Nevada'
                 },
         {
             'hc-key': 'es-tf',
             value: 60,
             idtogo:'#desplegableModalTenerife',
-            textoPopup:'Garajonay</b><br><b>Teide'
+            textoPopup:'Garajonay<br>Teide'
         },
                 //Galicia
                 {
@@ -222,7 +222,7 @@ $(function () {
         tooltip: {
             enabled: true,
             formatter: function() {
-                return '<b>' + this.point.textoPopup + '</b>';
+                return '<b>' + this.point.properties.region + '</b><br>' + this.point.textoPopup;
             }
         },
         
