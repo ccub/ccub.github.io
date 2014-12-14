@@ -3,7 +3,7 @@ $(document).ready(function() {
 			var optionsMaster;
     
             //var dataFiles = ["Segovia","Madrid","CiudadReal","Empleo"];
-            var dataFiles = ["Madrid"];
+            var dataFiles = ["Madrid","Cataluna"];
 
             $.each(dataFiles, function(dataFilesItemNo, dataFilesItem) {        
                 $.get('data/'+dataFilesItem+'.csv', function(data) {
