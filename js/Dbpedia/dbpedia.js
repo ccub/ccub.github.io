@@ -1,24 +1,34 @@
 $(document).ready(function() {
-    var url = "http://es.dbpedia.org/sparql";
+    var url = "http://dbpedia.org/sparql";
     var query = "\
-    PREFIX esdbp: <http://es.dbpedia.org/property/> \
-    PREFIX esdbr: <http://es.dbpedia.org/resource/Parque_nacional_de_Cabañeros> \
-    SELECT ?nombre WHERE { \
-    esdbr:   esdbp:nombre    ?nombre .\
+    PREFIX dbpedia2: <http://dbpedia.org/resource/>\
+    select * {\
+    OPTIONAL{dbpedia2:Mahatma_Gandhi dbpedia-owl:birthName ?nombre}\
+    OPTIONAL{dbpedia2:Mahatma_Gandhi dbpedia-owl:birthDate ?nacimiento}\
+    OPTIONAL{dbpedia2:Mahatma_Gandhi dbpedia-owl:restingPlace ?LugardeMuerte}\
+    OPTIONAL{dbpedia2:Mahatma_Gandhi dbpedia-owl:deathDate ?FechaDeMuerte}\
     }";
  
     var queryUrl = encodeURI( url+"?query="+query+"&format=json" );
     $.ajax({
         dataType: "jsonp",  
         url: queryUrl,
-        success: function( _data ) {
-            var results = _data.results.bindings;
-            $( 'body' ).append('<table><tbody>');
+        success: function( data ) {
+            var results = data.results.bindings;
+            
+            alert(JSON.stringify(results));
+            
+            var tabla = '<table>';
             for ( var i in results ) {
-                $( 'body' ).append( '<tr><td>'+'nombre'+'</tr></td>' );
-                $( 'body' ).append( '<tr><td>'+results[i].nombre.value+'</tr></td>' );
+                for ( var e in results[i] ) {
+                    if (results[i].hasOwnProperty(e)) {
+                        tabla = tabla + '<tr><td>' + e + '</td>';
+                        tabla = tabla + '<td>' + results[i][e].value + '</td></tr>';
+                    }
+                }
             }
-            $( 'body' ).append('</tbody></table>');
+            tabla = tabla + '</table>';
+            $( 'body' ).append(tabla);
         }
     });
 });
