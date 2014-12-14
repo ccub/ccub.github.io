@@ -11,7 +11,7 @@ $(function () {
             'hc-key': 'es-m',
             value: 10,
             idtogo:'#desplegableModalMadrid',
-            textoPopup:'Parque de Guadarrama<br>Parque de tatata'
+            textoPopup:'Parque de Guadarrama'
         },
         //Castilla la Mancha
         {
