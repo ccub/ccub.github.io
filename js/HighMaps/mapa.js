@@ -210,7 +210,7 @@ $(function () {
 
 
     // Creamos el mapa
-    $('#container').highcharts('Map', {
+    $('#containerMapa').highcharts('Map', {
 
         title: {
             text: null
