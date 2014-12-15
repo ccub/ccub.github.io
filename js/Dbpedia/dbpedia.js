@@ -15,7 +15,7 @@ function addTable(urlName,idToAppend) {
         OPTIONAL{dbp-url: dbpprop:mapCaption ?Region}\
         OPTIONAL{dbp-url: dbpprop:established ?A6o9de9creacion}\
         OPTIONAL{dbp-url: dbpprop:iucnCategory ?Categoria9IUCN}\
-        OPTIONAL{dbp-url: dbpprop:location ?Localizaciones9cercanas}\
+        OPTIONAL{dbp-url: dbpprop:location ?Localizacion}\
         OPTIONAL{dbp-url: dbpprop:visitationNum ?Numero9de9visitantes}\
         OPTIONAL{dbp-url: dbpprop:visitationYear ?A6o9del9dato9de9visitantes}\
         OPTIONAL{dbp-url: geo:lat ?Latitud}\
