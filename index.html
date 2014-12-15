@@ -328,6 +328,8 @@
                     </div>
                 </div>
             </div>
+            <table id="tablaMadrid">
+            </table>
             <div id="containerMadrid" class="common-charts">
             </div>
             <div class="container">
@@ -370,6 +372,8 @@
                     </div>
                 </div>
             </div>
+            <table id="tablaCastillaLaMancha">
+            </table>
             <!--<div id="containerCiudadReal" class="common-charts">
             </div>
             <div class="containerInfographics">
@@ -690,6 +694,8 @@
                     </div>
                 </div>
             </div>
+            <table id="tablaExtremadura">
+            </table>
             <div id="containerExtremadura" class="common-charts">
             </div>
             <div class="container">
@@ -768,6 +774,8 @@
                     </div>
                 </div>
             </div>
+            <table id="tablaCantabriaYAsturias">
+            </table>
             <div id="containerCantabriaYAsturias" class="common-charts">
             </div>
             <div class="container">
@@ -814,7 +822,12 @@
     
     <!-- Working with data -->
     <script src="js/HighCharts/setData.js"></script>
-    <!-- <script src="js/Dbpedia/dbpedia.js"></script> -->
+    <script src="js/Dbpedia/dbpedia.js"></script>
+    <script>
+        addTable("Picos_de_Europa", "tablaCantabriaYAsturias");
+        addTable("Caba%C3%B1eros_National_Park", "tablaCastillaLaMancha");
+        addTable("Monfrag%C3%BCe", "tablaExtremadura");
+    </script>
     
     <!-- HighMaps JavaScript -->
     <script src="http://code.highcharts.com/maps/modules/map.js"></script>

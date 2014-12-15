@@ -1,25 +1,26 @@
-$(document).ready(function() {
+function addTable(urlName,idToAppend) {
     var url = "http://dbpedia.org/sparql";
+    //PREFIX dbp-url: <http://dbpedia.org/resource/Caba%C3%B1eros_National_Park>
+    //PREFIX dbp-url: <http://dbpedia.org/resource/Picos_de_Europa>
     var query = "\
-        PREFIX dbp-url: <http://dbpedia.org/resource/Picos_de_Europa>\
-        PREFIX dbp-prop: <http://dbpedia.org/property/>\
-        PREFIX dbp-geo: <http://www.w3.org/2003/01/geo/wgs84_pos/>\
-        PREFIX dbp-foaf: <http://xmlns.com/foaf/0.1/>\
+        PREFIX dbp-url: <http://dbpedia.org/resource/" + urlName + ">\
         select * {\
-        OPTIONAL{dbp-url: dbp-prop:name ?Nombre}\
-        OPTIONAL{dbp-url: dbp-prop:areaKm ?Area}\
-        OPTIONAL{dbp-url: dbp-prop:country ?Pais}\
-        OPTIONAL{dbp-url: dbp-prop:elevationM ?Altitud}\
-        OPTIONAL{dbp-url: dbp-prop:highest ?Punto9mas9alto}\
-        OPTIONAL{dbp-url: dbp-prop:mapCaption ?Region}\
-        OPTIONAL{dbp-url: dbp-prop:established ?Creacion}\
-        OPTIONAL{dbp-url: dbp-prop:iucnCategory ?Categoria9IUCN}\
-        OPTIONAL{dbp-url: dbp-prop:location ?Localizaciones9cercanas}\
-        OPTIONAL{dbp-url: dbp-prop:visitationNum ?Numero9de9visitantes}\
-        OPTIONAL{dbp-url: dbp-prop:visitationYear ?Año9numero9de9visitantes}\
-        OPTIONAL{dbp-url: dbp-foaf:homepage ?Pagina9web}\
-        OPTIONAL{dbp-url: dbp-geo:lat ?Latitud}\
-        OPTIONAL{dbp-url: dbp-geo:long ?Longitud}\
+        OPTIONAL{dbp-url: rdfs:label ?Nombre97Espa6ol8 . FILTER (LANG(?Nombre97Espa6ol8)='es')}\
+        OPTIONAL{dbp-url: dbpprop:name ?Nombre}\
+        OPTIONAL{dbp-url: dbpprop:area ?Area97Km289}\
+        OPTIONAL{dbp-url: dbpprop:areaKm ?Area97Km28}\
+        OPTIONAL{dbp-url: dbpprop:country ?Pais}\
+        OPTIONAL{dbp-url: dbpprop:elevationM ?Altitud}\
+        OPTIONAL{dbp-url: dbpprop:highest ?Punto9mas9alto}\
+        OPTIONAL{dbp-url: dbpprop:mapCaption ?Region}\
+        OPTIONAL{dbp-url: dbpprop:established ?A6o9de9creacion}\
+        OPTIONAL{dbp-url: dbpprop:iucnCategory ?Categoria9IUCN}\
+        OPTIONAL{dbp-url: dbpprop:location ?Localizaciones9cercanas}\
+        OPTIONAL{dbp-url: dbpprop:visitationNum ?Numero9de9visitantes}\
+        OPTIONAL{dbp-url: dbpprop:visitationYear ?A6o9del9dato9de9visitantes}\
+        OPTIONAL{dbp-url: geo:lat ?Latitud}\
+        OPTIONAL{dbp-url: geo:long ?Longitud}\
+        OPTIONAL{dbp-url: foaf:homepage ?Pagina9web}\
     }";
     
     /*PREFIX dbp-url: <http://dbpedia.org/resource/Mahatma_Gandhi>\
@@ -89,20 +90,24 @@ $(document).ready(function() {
         url: queryUrl,
         success: function( data ) {
             var results = data.results.bindings;        
-            var table = '<table>';
+            var table = '';
             for ( var i in results ) {
                 for ( var e in results[i] ) {
                     if (results[i].hasOwnProperty(e)) {
-                        table = table + '<tr><td>' + e.replace(/9/g, " ") + '</td>';
+                        var temp = e;
+                        temp = temp.replace(/9/g, ' ');
+                        temp = temp.replace(/8/g, ')');
+                        temp = temp.replace(/7/g, '(');
+                        temp = temp.replace(/6/g, 'ñ');
+                        table = table + '<tr><td><b>' + temp + '</b></td>';
                         table = table + '<td>' + results[i][e].value + '</td></tr>';
                     }
                 }
             }
-            table = table + '</table>';
-            $( 'body' ).append(table);
+            $( '#' + idToAppend ).append(table);
         }
     });
-});
+}
 
 /*
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>

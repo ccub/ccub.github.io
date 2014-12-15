@@ -57,6 +57,22 @@ h6 {
     font-weight: 700;
 }
 
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+td,th {
+    border: 1px solid #bbb;
+    padding: 4px; 8px;
+    background-color: white;
+    color: black;
+    text-align: left;
+    word-break: break-all;
+}
+
 .text-justified {
     text-align: justify;
     text-justify: inter-word;
