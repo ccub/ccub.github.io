@@ -10,7 +10,7 @@ function addTable(urlName,idToAppend) {
         OPTIONAL{dbp-url: dbpprop:area ?Area97Km289}\
         OPTIONAL{dbp-url: dbpprop:areaKm ?Area97Km28}\
         OPTIONAL{dbp-url: dbpprop:country ?Pais}\
-        OPTIONAL{dbp-url: dbpprop:elevationM ?Altitud}\
+        OPTIONAL{dbp-url: dbpprop:elevationM ?Altitud97m8}\
         OPTIONAL{dbp-url: dbpprop:highest ?Punto9mas9alto}\
         OPTIONAL{dbp-url: dbpprop:mapCaption ?Region}\
         OPTIONAL{dbp-url: dbpprop:established ?A6o9de9creacion}\
