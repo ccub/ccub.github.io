@@ -1,4 +1,4 @@
-function addTable(urlName,idToAppend) {
+function addTable(idToAppend,urlName) {
     var url = "http://dbpedia.org/sparql";
     //PREFIX dbp-url: <http://dbpedia.org/resource/Caba%C3%B1eros_National_Park>
     //PREFIX dbp-url: <http://dbpedia.org/resource/Picos_de_Europa>
@@ -7,6 +7,7 @@ function addTable(urlName,idToAppend) {
         select * {\
         OPTIONAL{dbp-url: rdfs:label ?Nombre97Espa6ol8 . FILTER (LANG(?Nombre97Espa6ol8)='es')}\
         OPTIONAL{dbp-url: dbpprop:name ?Nombre}\
+        OPTIONAL{dbp-url: dbpedia-owl:areaTotal ?Area97m2899}\
         OPTIONAL{dbp-url: dbpprop:area ?Area97Km289}\
         OPTIONAL{dbp-url: dbpprop:areaKm ?Area97Km28}\
         OPTIONAL{dbp-url: dbpprop:country ?Pais}\
@@ -18,8 +19,8 @@ function addTable(urlName,idToAppend) {
         OPTIONAL{dbp-url: dbpprop:location ?Localizacion}\
         OPTIONAL{dbp-url: dbpprop:visitationNum ?Numero9de9visitantes}\
         OPTIONAL{dbp-url: dbpprop:visitationYear ?A6o9del9dato9de9visitantes}\
-        OPTIONAL{dbp-url: geo:lat ?Latitud}\
-        OPTIONAL{dbp-url: geo:long ?Longitud}\
+        OPTIONAL{dbp-url: geo:lat ?Coordenadas9latitud}\
+        OPTIONAL{dbp-url: geo:long ?Coordenadas9longitud}\
         OPTIONAL{dbp-url: foaf:homepage ?Pagina9web}\
     }";
     
@@ -91,17 +92,17 @@ function addTable(urlName,idToAppend) {
         success: function( data ) {
             var results = data.results.bindings;        
             var table = '';
-            for ( var i in results ) {
-                for ( var e in results[i] ) {
-                    if (results[i].hasOwnProperty(e)) {
-                        var temp = e;
-                        temp = temp.replace(/9/g, ' ');
-                        temp = temp.replace(/8/g, ')');
-                        temp = temp.replace(/7/g, '(');
-                        temp = temp.replace(/6/g, 'ñ');
-                        table = table + '<tr><td><b>' + temp + '</b></td>';
-                        table = table + '<td>' + results[i][e].value + '</td></tr>';
-                    }
+            //for ( var i in results ) {
+            var i = 0;
+            for ( var e in results[i] ) {
+                if (results[i].hasOwnProperty(e)) {
+                    var temp = e;
+                    temp = temp.replace(/9/g, ' ');
+                    temp = temp.replace(/8/g, ')');
+                    temp = temp.replace(/7/g, '(');
+                    temp = temp.replace(/6/g, 'ñ');
+                    table = table + '<tr><td><b>' + temp + '</b></td>';
+                    table = table + '<td>' + results[i][e].value + '</td></tr>';
                 }
             }
             $( '#' + idToAppend ).append(table);
