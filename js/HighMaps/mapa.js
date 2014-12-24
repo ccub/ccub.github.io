@@ -10,27 +10,27 @@ $(function () {
         //Castilla la Mancha
         {
             'hc-key': 'es-to',
-            value: 0,
+            value: 10,
             textoPopup:'Cabañeros<br>Tablas de Daimiel'
         },
         {
             'hc-key': 'es-gu',
-            value: 0,
+            value: 10,
             textoPopup:'Cabañeros<br>Tablas de Daimiel'
         },
         {
             'hc-key': 'es-ab',
-            value: 0,
+            value: 10,
             textoPopup:'Cabañeros<br>Tablas de Daimiel'
         },
         {
             'hc-key': 'es-cu',
-            value: 0,
+            value: 10,
             textoPopup:'Cabañeros<br>Tablas de Daimiel'
         },
         {
             'hc-key': 'es-cr',
-            value: 0,
+            value: 10,
             textoPopup:'Cabañeros<br>Tablas de Daimiel'
         },
             //Cataluna
@@ -269,7 +269,15 @@ $(function () {
                 point.graphic.attr({
                     cursor: 'pointer'
                 });
-                point.options.idtogo = '#desplegableCCAA' + point.properties["woe-name"].replace(/ /g, '');
+                var name = point.properties["woe-name"];
+                name = name.replace(/ /g, '');
+                name = name.replace(/á/g, 'a');
+                name = name.replace(/é/g, 'e');
+                name = name.replace(/í/g, 'i');
+                name = name.replace(/ó/g, 'o');
+                name = name.replace(/ú/g, 'u');
+                name = name.replace(/ñ/g, 'n');
+                point.options.idtogo = '#desplegableCCAA' + name;
             }
         });
     });
