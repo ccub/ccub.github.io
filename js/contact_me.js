@@ -18,7 +18,7 @@ $(function() {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
             $.ajax({
-                url: "//forms.brace.io/ccub.soporte@gmail.com",
+                url: "//formspree.io/ccub.soporte@gmail.com",
                 type: "POST",
                 dataType: "json",
                 data: {
