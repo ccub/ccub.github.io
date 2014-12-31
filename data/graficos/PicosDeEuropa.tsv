@@ -1,0 +1,9 @@
+tipo de grafico	columnas apiladas		
+titulo grafico	Gastos del Parque Nacional de Picos de Europa		
+titulo eje x	Gasto total  [Datos no disponibles: Áreas de influencia (2012)]		
+titulo eje y	Euros		
+categorias	2010	2011	2012
+Personal	2262195.31	2262195.31	2000000
+Áreas de influencia	1224757.68	1224757.68	null
+Mantenimiento y vigilancia	2223683.79	2073957.8	599909.77
+Inversiones en el medio natural	5118851.01	2127621.29	845926.83

@@ -1,0 +1,9 @@
+tipo de grafico	columnas apiladas		
+titulo grafico	Gastos del Parque Nacional de Cabañeros		
+titulo eje x	Gasto total [Datos no disponibles: Áreas de influencia (2012)]		
+titulo eje y	Euros		
+categorias	2010	2011	2012
+Personal	561585.89	597867.28	562430.64
+Áreas de influencia	1056232.09	811178.95	null
+Mantenimiento y vigilancia	911898.82	1480299.69	2246813.19
+Inversiones en el medio natural	3878921.74	5513389.65	1036914.28

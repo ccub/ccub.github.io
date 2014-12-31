@@ -1,0 +1,9 @@
+tipo de grafico	columnas apiladas		
+titulo grafico	Gastos del Parque Nacional de Ordesa y Monte Perdido		
+titulo eje x	Gasto total  [Datos no disponibles: Áreas de influencia (2012)]		
+titulo eje y	Euros		
+categorias	2010	2011	2012
+Personal	1195049.31	1195049.31	1103615.07
+Áreas de influencia	989336.64	989336.64	null
+Mantenimiento y vigilancia	1214292.15	194606.14	152572.6
+Inversiones en el medio natural	1059962.4	2101060.05	1848451.35

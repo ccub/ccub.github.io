@@ -1,0 +1,9 @@
+tipo de grafico	columnas apiladas		
+titulo grafico	Gastos del Parque Nacional de Monfragüe		
+titulo eje x	Gasto total  [Datos no disponibles: Personal, Áreas de influencia (2012), Mantenimiento y vigilancia, Inversiones en el medio natural (2012)]		
+titulo eje y	Euros		
+categorias	2010	2011	2012
+Personal	null	null	null
+Áreas de influencia	1069612.66	1069612.66	null
+Mantenimiento y vigilancia	null	null	null
+Inversiones en el medio natural	2650303.06	3406123.07	null

@@ -1,0 +1,9 @@
+tipo de grafico	columnas apiladas		
+titulo grafico	Gastos del Parque Nacional de Garajonay		
+titulo eje x	Gasto total  [Datos no disponibles: Personal (2010, 2012), Áreas de influencia, Mantenimiento y vigilancia (2010), Inversiones en el medio natural (2010)]		
+titulo eje y	Euros		
+categorias	2010	2011	2012
+Personal	null	442952.8	null
+Áreas de influencia	null	null	null
+Mantenimiento y vigilancia	null	587104.67	575767.44
+Inversiones en el medio natural	null	2123927.38	1489883.43

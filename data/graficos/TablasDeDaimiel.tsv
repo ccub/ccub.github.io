@@ -1,0 +1,9 @@
+tipo de grafico	columnas apiladas		
+titulo grafico	Gastos del Parque Nacional de Tablas de Daimiel		
+titulo eje x	Gasto total  [Datos no disponibles: Áreas de influencia (2010)]		
+titulo eje y	Euros		
+categorias	2010	2011	2012
+Personal	609005.07	442952.8	417465.42
+Áreas de influencia	null	92649.62	1471339.88
+Mantenimiento y vigilancia	660234.58	483294.43	392615.9
+Inversiones en el medio natural	1655574.16	2866821.06	1524916.88

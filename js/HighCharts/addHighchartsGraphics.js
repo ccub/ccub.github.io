@@ -1,5 +1,11 @@
 function addHighchartsGraphics(graphicName) { 
     var options;
+    Highcharts.setOptions({
+		lang: {
+			decimalPoint: ',',
+            thousandsSep: '.'
+		}
+	});
     $.get('data/graficos/'+graphicName+'.tsv', function(data) {
         var separators = ['\n'];
         var lines = data.split(new RegExp(separators.join('|'), 'g'));
@@ -17,9 +23,9 @@ function addHighchartsGraphics(graphicName) {
                                     },
                                     xAxis: {
                                         categories: [],
-                                                    title: {
-                                            text: ''
-                                        }
+                                            title: {
+                                                text: ''
+                                            }
                                     },
                                     yAxis: {
                                         title: {
@@ -43,9 +49,9 @@ function addHighchartsGraphics(graphicName) {
                                     },
                                     xAxis: {
                                         categories: [],
-                                                    title: {
-                                            text: ''
-                                        }
+                                            title: {
+                                                text: ''
+                                            }
                                     },
                                     yAxis: {
                                         title: {

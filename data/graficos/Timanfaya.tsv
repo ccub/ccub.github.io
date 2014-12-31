@@ -1,0 +1,9 @@
+tipo de grafico	columnas apiladas		
+titulo grafico	Gastos del Parque Nacional de Timanfaya		
+titulo eje x	Gasto total  [Datos no disponibles: Personal (2012), Áreas de influencia]		
+titulo eje y	Euros		
+categorias	2010	2011	2012
+Personal	392100.11	392100.11	null
+Áreas de influencia	null	null	null
+Mantenimiento y vigilancia	1041094.26	1019000	990444.99
+Inversiones en el medio natural	582627.79	288527.38	48617.01
